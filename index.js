@@ -28,12 +28,6 @@ if (hamburgerMenu.classList.contains('show-menu')) {
     menuBtn.setAttribute('aria-expanded', false)
 }
 }
-document.body.onclick = function(e) {
-    if (!hamburgerMenu.contains(e.target)){
-        closeMenu(e)
-    }
-    
-}
 document.onkeyup = function(e){
     if (e.key === 'Escape'){
         closeMenu(e)
@@ -41,3 +35,10 @@ document.onkeyup = function(e){
         closeMenu(e)
     }}}
 
+
+document.body.onclick = function(e) {
+    if (!hamburgerMenu.contains(e.target)){
+        closeMenu(e)
+    }
+    
+}
